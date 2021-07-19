@@ -27,3 +27,13 @@ $ pipenv --three
 * `pipenv shell` 명령어를 통해 pipenv의 버블 안으로 위치한다
 * 이후 이 shell 내부에서 패키지를 설치하면 해당 프로젝트 내에서만 사용 가능한 패키지로 설치
     * 설치한 패키지의 의존성*dependency*는 `Pipfile`내부에 추가된다 (향후 해당 소스코드를 사용하는 다른 프로젝트에서도 사용가능)
+
+## Django
+* Django는 `pipenv install django=={version}`으로 설치한다
+* 프로젝트를 생성할 때에는 `django-admin startproject {projectName}`명령어를 사용하여 설치한다
+    * 위 방법은 매우 초심자-친화적이어서 이번 프로젝트 내에선 사용하지 않을것
+
+### Django 프로젝트 생성
+1. 먼저 `django-admin startproject config`로 `config` 프로젝트 생성
+2. 다음 `config/config`폴더와 `config/manage.py`파일을 프로젝트의 최상위로 이동
+3. 
