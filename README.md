@@ -2,6 +2,21 @@
 * 2021년 7월에 시작한 NomadCoders의 Django Airbnb 클론코딩
 * 해당 프로젝트는 Django 2.2.5 버전을 사용
 
+## Python
+* Python은 런타임 언어이다.
+    * 컴파일러가 존재하지 않는다. 그렇기 때문에 소스코드에 에러가 있어도 이것을 잡아내줄 방법이 없다는 뜻이다.
+    * 위 단점을 보완하기 위해 사람들이 구현한 것이 `Linter`라는 프로그램
+        * Linter는 파이썬 코드를 실행 전 해당 파이썬 프로젝트에 가이드라인 위반 등의 오류를 잡아준다
+        * 해당 프로젝트에서는 `> Python : Select Linter -> flake8`을 사용할 것
+        * 설치되어 있지 않다면 설치할 것
+        * Linter에서 이미 deprecate된 항목들이 에러로 발생한다면, settings.json에서
+            `"python.linting.flake8Args" : ["--max-line-length={lineLength}"]`
+            을 추가해준다
+    * Formatter
+        * 자동으로 코드를 보기 좋게 형식에 맞춰주는 프로그램
+        * 해당 프로젝트에서는 `black` 포맷터를 사용할 것
+* PEP 8 *Python Enhancement Proposal* : Python의 코드 가이드라인/컨벤션
+
 ## Pipenv
 * Python에서 기본적으로 제공하는 PIP(Python Package Installer)에서 설치한 패키지는 글로벌*global*하게 설치되어 각 프로젝트별로 패키지를 관리할 수 없다
 * 위의 단점을 보완하기 위해 나온것이 Pipenv이며 각 프로젝트 별로 버블*bubble*을 생성하여 패키지를 프로젝트 단위로 관리할 수 있게 해준다
