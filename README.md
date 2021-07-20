@@ -47,8 +47,12 @@ $ pipenv --three
 * Django는 `pipenv install django=={version}`으로 설치한다
 * 프로젝트를 생성할 때에는 `django-admin startproject {projectName}`명령어를 사용하여 설치한다
     * 위 방법은 매우 초심자-친화적이어서 이번 프로젝트 내에선 사용하지 않을것
+* Django에서 기본적으로 생성해준 파일들의 주석들을 잘 보고 Document의 도움을 받을것
 
 ### Django 프로젝트 생성
-1. 먼저 `django-admin startproject config`로 `config` 프로젝트 생성
-2. 다음 `config/config`폴더와 `config/manage.py`파일을 프로젝트의 최상위로 이동
-3. 
+1. `pipenv shell`
+2. 먼저 `django-admin startproject config`로 `config` 프로젝트 생성
+3. 다음 `config/config`폴더와 `config/manage.py`파일을 프로젝트의 최상위로 이동
+4. `python manage.py migrate`
+5. `python manage.py runserver`로 장고서버 실행
+6. `python manage.py superuser`로 관리자 생성
