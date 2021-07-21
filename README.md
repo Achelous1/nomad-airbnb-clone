@@ -67,3 +67,5 @@ $ pipenv --three
 ### Django Application 생성
 1. `django-admin startapp {application명}` 명령어로 생성
     * rooms, users, reviews, conversations, lists, reservations 생성
+    * 생성된 Application내부의 파일들의 이름은 ***절대로!!!*** 변경해서는 안된다
+        * Django에서 지정한 규칙대로 사용해야 하기 때문(Framework와 Library의 차이)
