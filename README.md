@@ -48,11 +48,18 @@ $ pipenv --three
 * 프로젝트를 생성할 때에는 `django-admin startproject {projectName}`명령어를 사용하여 설치한다
     * 위 방법은 매우 초심자-친화적이어서 이번 프로젝트 내에선 사용하지 않을것
 * Django에서 기본적으로 생성해준 파일들의 주석들을 잘 보고 Document의 도움을 받을것
+* Django프로젝트 
+    * Django프로젝트는 기본적으로 application들의 묶음이다
+    * Application은 function들의 묶음이다
+    * 각 Application 별로 묶어서 관리
+    * 각 Application은 최대한 계획하여 서비스 별로 모듈화(작게)해서 만들 것
+        * :thumbsup: Rule of Thumb : Application에 대해서 한문장으로 설명할 수 있어야 할 것!
 
 ### Django 프로젝트 생성
 1. `pipenv shell`
 2. 먼저 `django-admin startproject config`로 `config` 프로젝트 생성
 3. 다음 `config/config`폴더와 `config/manage.py`파일을 프로젝트의 최상위로 이동
-4. `python manage.py migrate`
-5. `python manage.py runserver`로 장고서버 실행
-6. `python manage.py superuser`로 관리자 생성
+4. `python manage.py makemigration`으로 migration 할 model 데이터 생성 
+5. `python manage.py migrate`로 DB에 데이터 마이그레이션
+6. `python manage.py runserver`로 장고서버 실행
+7. `python manage.py superuser`로 관리자 생성
