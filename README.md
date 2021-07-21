@@ -63,3 +63,7 @@ $ pipenv --three
 5. `python manage.py migrate`로 DB에 데이터 마이그레이션
 6. `python manage.py runserver`로 장고서버 실행
 7. `python manage.py superuser`로 관리자 생성
+
+### Django Application 생성
+1. `django-admin startapp {application명}` 명령어로 생성
+    * rooms, users, reviews, conversations, lists, reservations 생성
