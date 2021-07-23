@@ -57,6 +57,9 @@ $ pipenv --three
 * Django ORM(Object Relational Mapping)
     * Django는 ORM으로 데이터베이스와 통신한다
 
+* Good Practices :
+    1. import를 할 때에는 django/python 패키지 -> 써드파티 패키지 -> 커스텀 패키지 순으로 import 한다
+
 ### Django 프로젝트 생성
 1. `pipenv shell`
 2. 먼저 `django-admin startproject config`로 `config` 설정폴더 생성
@@ -89,3 +92,6 @@ $ pipenv --three
     * Python에서 `models.ImageField()`를 사용하려면 pillow란 플러그인을 사용해야 한다
     ``` pipenv install Pillow ```
     * charfield에서 값을 특정하고 싶다면 choices를 사용 (Users/models.py 참조)
+    * 특정 모델에서 다른 모델과의 참조관계(foreign key)를 만들고 싶다면:
+        1. 필드를 `models.ForeignKey()`로 정의
+        2. 연결할 모델을 import하고 필드에 모델 및 옵션 넘겨주기 (rooms/models.py 참조)
