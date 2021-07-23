@@ -43,7 +43,8 @@ PROJECT_APPS = [
     "users.apps.UsersConfig",
 ]
 
-INSTALLED_APPS = [DJANGO_APPS + PROJECT_APPS]
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -125,4 +126,4 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-AUTH_USER_MDOEL = "users.User"
+AUTH_USER_MODEL = "users.User"

@@ -80,3 +80,6 @@ $ pipenv --three
 
 3. Django에서 application을 settings.py의 `INSTALLED_APPS`에 추가하면 장고실행 시 읽어올 수 있다.
     * 기본적인 Django app들과 Project app을 분리해서 관리하면 편하다
+
+4. models.py에선 기본적으로 해당 application에서 사용될 모델을 정의하는데 의의가 있다.
+    * model의 유형에 관해서 [참조](https://docs.djangoproject.com/en/3.2/ref/models/fields/)
