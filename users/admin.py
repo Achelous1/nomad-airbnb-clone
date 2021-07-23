@@ -3,7 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 from . import models
 
 
-@admin.register(models.User)
+@admin.register(models.User)  # decorator
 class CustomUserAdmin(UserAdmin):
 
     """Custom User Admin"""

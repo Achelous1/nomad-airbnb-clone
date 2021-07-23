@@ -54,10 +54,12 @@ $ pipenv --three
     * 각 Application 별로 묶어서 관리
     * 각 Application은 최대한 계획하여 서비스 별로 모듈화(작게)해서 만들 것
         * :thumbsup: Rule of Thumb : Application에 대해서 한문장으로 설명할 수 있어야 할 것!
+* Django ORM(Object Relational Mapping)
+    * Django는 ORM으로 데이터베이스와 통신한다
 
 ### Django 프로젝트 생성
 1. `pipenv shell`
-2. 먼저 `django-admin startproject config`로 `config` 프로젝트 생성
+2. 먼저 `django-admin startproject config`로 `config` 설정폴더 생성
 3. 다음 `config/config`폴더와 `config/manage.py`파일을 프로젝트의 최상위로 이동
 4. `python manage.py makemigration`으로 migration 할 model 데이터 생성 
 5. `python manage.py migrate`로 DB에 데이터 마이그레이션
