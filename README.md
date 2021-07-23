@@ -86,3 +86,4 @@ $ pipenv --three
     * model에 클래스를 추가할 때마다 comment block `""" {model description} """` 을 추가해서 해당 모델이 어디에 사용되는지 입력할 수 있다
     * Python에서 `models.ImageField()`를 사용하려면 pillow란 플러그인을 사용해야 한다
     ``` pipenv install Pillow ```
+    * charfield에서 값을 특정하고 싶다면 choices를 사용 (Users/models.py 참조)
