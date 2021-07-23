@@ -24,16 +24,16 @@ class User(AbstractUser):
     LANGUAGE_KOREAN = "kr"
 
     LANGUAGE_CHOICES = (
-        (LANGUAGE_ENGLISH, "en"),
-        (LANGUAGE_KOREAN, "kr"),
+        (LANGUAGE_ENGLISH, "English"),
+        (LANGUAGE_KOREAN, "Korean"),
     )
 
     CURRENCY_USD = "usd"
     CURRENCY_KRW = "krw"
 
     CURRNECY_CHOICES = (
-        (CURRENCY_USD, "usd"),
-        (CURRENCY_KRW, "krw"),
+        (CURRENCY_USD, "USD"),
+        (CURRENCY_KRW, "KRW"),
     )
 
     avatar = models.ImageField(null=True, blank=True)
