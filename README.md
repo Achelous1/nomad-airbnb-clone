@@ -83,3 +83,6 @@ $ pipenv --three
 
 4. models.py에선 기본적으로 해당 application에서 사용될 모델을 정의하는데 의의가 있다.
     * model의 유형에 관해서 [참조](https://docs.djangoproject.com/en/3.2/ref/models/fields/)
+    * model에 클래스를 추가할 때마다 comment block `""" {model description} """` 을 추가해서 해당 모델이 어디에 사용되는지 입력할 수 있다
+    * Python에서 `models.ImageField()`를 사용하려면 pillow란 플러그인을 사용해야 한다
+    ``` pipenv install Pillow ```
