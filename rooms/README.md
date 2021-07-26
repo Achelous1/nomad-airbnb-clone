@@ -4,5 +4,6 @@
     * `pipenv install django-countries` 로 설치
     * `settings.py`파일의 `THIRD_PARTY_APPS`에 `django_countries`항목 추가
 * Room 클래스와 User 클래스를 foreign key로 연결 (`1:m 관계`)
+    * `on_delete` : 유저인스턴스가 삭제될 시 장고에서 데이터베이스로 명령할 행위이다 [참조](https://docs.djangoproject.com/ko/3.2/ref/models/fields/#foreignkey)
 * Room 클래스와 각 Room type 등을 Abstract Item을 통해 many to many(`m:m 관계`)으로 연결
 * Room type 등을 admin.py에 `@admin.register` 데코레이터로 추가하여 어드민패널에서 CRUD가 가능하다
