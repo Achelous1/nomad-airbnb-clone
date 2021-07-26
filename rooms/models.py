@@ -4,6 +4,23 @@ from core import models as core_models
 from users import models as user_models
 
 
+class AbstractItem(core_models.TimeStampedModel):
+    """Abstract Item"""
+
+    name = models.CharField(max_length=80)
+
+    class Meta:
+        abstract = True
+
+    def __str__(self) -> str:
+        return self.name
+
+
+class RoomType(AbstractItem):
+
+    pass
+
+
 class Room(core_models.TimeStampedModel):
 
     """Rooms Model Definition"""
@@ -20,7 +37,11 @@ class Room(core_models.TimeStampedModel):
     baths = models.IntegerField()
     check_in = models.TimeField()
     check_out = models.TimeField()
-    instant_bok = models.BooleanField(default=False)
+    instant_book = models.BooleanField(default=False)
     host = models.ForeignKey(
         user_models.User, on_delete=models.CASCADE
     )  # User 모델 임포트 및 연결
+    room_type = models.ManyToManyField(RoomType, blank=True)
+
+    def __str__(self) -> str:
+        return self.name
