@@ -60,6 +60,10 @@ $ pipenv --three
 * Good Practices :
     1. import를 할 때에는 django/python 패키지 -> 써드파티 패키지 -> 커스텀 패키지 순으로 import 한다
 
+* Meta Class : 
+    1. 상속 되지 않는 해당 클래스의 고유 메타정보를 담고 있는 클래스 [참조](https://docs.djangoproject.com/en/3.2/ref/models/options/)
+
+
 ### Django 프로젝트 생성
 1. `pipenv shell`
 2. 먼저 `django-admin startproject config`로 `config` 설정폴더 생성
