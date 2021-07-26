@@ -7,6 +7,8 @@ name = "pypi"
 django = "==2.2.5"
 pillow = "*"
 django-countries = "*"
+black = "*"
+flake8 = "*"
 
 [dev-packages]
 flake8 = "*"
