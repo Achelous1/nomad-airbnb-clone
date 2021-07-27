@@ -11,4 +11,6 @@
     * `list_display` : admin 리스트 테이블에서 보여줄 컬럼의 리스트
     * `list_filter` : admin 리스트 테이블 필터 항목
     * `search_fields` : admin 리스트에서 특정 항목들의 문자열을 검색할 수 있다.(case insensitive)[참조](https://docs.djangoproject.com/en/3.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.search_fields)
+    * `__`로 object의 특정 필드를 검색할 수도 있음
+    * `filter_horizontal` : 수정화면에서 add/remove로 항목을 움직일 수 있음
 * `model`의 `city`항목의 첫글자를 대문자로 바꾸려면 중간에 intercept를 통하여 구현
