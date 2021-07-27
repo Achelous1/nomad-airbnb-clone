@@ -77,9 +77,15 @@ class Room(core_models.TimeStampedModel):
     check_in = models.TimeField()
     check_out = models.TimeField()
     instant_book = models.BooleanField(default=False)
+    # User 모델 임포트 및 연결
+    """
+    "users.User" - 어느 모델을 사용할 것인지 string값으로 명시
+    related_name - 현재 모델이 타겟 모델에서 어떻게 보일 것인가 명시(migrate필요)
+    on_delete - "타겟"모델이 삭제 되었을 때 현재 모델을 어떻게 할 것인가 명시
+    """
     host = models.ForeignKey(
         "users.User", related_name="rooms", on_delete=models.CASCADE
-    )  # User 모델 임포트 및 연결
+    )
     room_type = models.ForeignKey("RoomType", on_delete=models.SET_NULL, null=True)
     amenities = models.ManyToManyField("Amenity", blank=True)
     facilities = models.ManyToManyField("Facility", blank=True)
