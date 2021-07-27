@@ -16,6 +16,9 @@
         * 자동으로 코드를 보기 좋게 형식에 맞춰주는 프로그램
         * 해당 프로젝트에서는 `black` 포맷터를 사용할 것
 * PEP 8 *Python Enhancement Proposal* : Python의 코드 가이드라인/컨벤션
+* vars & dir
+    * `vars` : `__dict__`속성 즉 해당 모듈, 클래스, 인스턴스 또는 다른 모든 오브젝트의 딕셔너리 정보를 반환한다
+    * `dir` : 인수없이 호출했을 때, 현재 로컬 스코프에 존재하는 name들의 리스트를 반환한다
 
 ## Pipenv
 * Python에서 기본적으로 제공하는 PIP(Python Package Installer)에서 설치한 패키지는 글로벌*global*하게 설치되어 각 프로젝트별로 패키지를 관리할 수 없다
@@ -64,6 +67,12 @@ $ pipenv --three
 * Meta Class : 
     1. 상속 되지 않는 해당 클래스의 고유 메타정보를 담고 있는 클래스 [참조](https://docs.djangoproject.com/en/3.2/ref/models/options/)
 
+* Console에서 Django 를 실행하여 스크립트를 짜볼 때 `python manage.py shell` 로써 실행한다.
+* `manager` : Django의 모델 내부에 존재하여 데이터베이스와 통신할 수 있게 해주는 객체( == DAO? Mapper?)[참고](https://docs.djangoproject.com/en/3.2/topics/db/queries/)
+* `QuerySet` : model object의 list이며 데이터를 쿼리함에 있어 유용한 객체 [참고](https://docs.djangoproject.com/en/3.2/ref/models/querysets/)
+    * `filter()` : select where
+    * `get()` : select one
+    * `all()` : 모든 리스트 select
 
 ### Django 프로젝트 생성
 1. `pipenv shell`
