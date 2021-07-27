@@ -73,6 +73,8 @@ $ pipenv --three
     * `filter()` : select where
     * `get()` : select one
     * `all()` : 모든 리스트 select
+* Django ORM
+    * ForeignKey : 해당 타겟의 `target.{model_name}_set`에서 조회가 가능하다
 
 ### Django 프로젝트 생성
 1. `pipenv shell`
