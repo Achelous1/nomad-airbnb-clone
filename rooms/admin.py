@@ -56,6 +56,7 @@ class RoomAdmin(admin.ModelAdmin):
         "baths",
         "check_in",
         "check_out",
+        "count_amnenities",
     )
 
     list_filter = (
@@ -65,6 +66,8 @@ class RoomAdmin(admin.ModelAdmin):
         "city",
         "country",
     )
+
+    ordering = ("name", "price")
 
     filter_horizontal = (
         "amenities",
@@ -81,6 +84,17 @@ class RoomAdmin(admin.ModelAdmin):
     none : case insensitive wherever search
     """
     search_fields = ("^city", "host__username")
+
+    """
+    self = this
+    obj = row
+    """
+
+    def count_amnenities(self, obj):
+        print(obj.amenities.all())
+        return "potata"
+
+    count_amnenities.short_description = "Amenities Count"
 
 
 @admin.register(models.Photo)
