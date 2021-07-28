@@ -62,6 +62,7 @@ class RoomAdmin(admin.ModelAdmin):
         "check_out",
         "count_amnenities",
         "count_photos",
+        "total_rating",
     )
 
     list_filter = (
