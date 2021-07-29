@@ -91,12 +91,12 @@ $ pipenv --three
     * rooms, users, reviews, conversations, lists, reservations 생성
     * 생성된 Application내부의 파일들의 이름은 ***절대로!!!*** 변경해서는 안된다
         * Django에서 지정한 규칙대로 사용해야 하기 때문(Framework와 Library의 차이)
-    * admin.py -> admin 패널에서 반영 될 코드
-    * apps.py -> Application의 설정파일
-    * models.py -> 데이터베이스에 반영될 모델데이터
-    * tests.py -> 테스트 파일
-    * views.py -> 사용자가 보게 될 html을 설정하는 파일
-    * urls.py -> 기본적으로 들어가있지는 않지만 하나의 urls.py로 모든 url을 관리하기엔 너무 많기 때문에 각 application별로 생성해줄 것
+    * [`admin.py`](./ADMIN.PY.md) -> admin 패널에서 반영 될 코드
+    * `apps.py` -> Application의 설정파일
+    * [`models.py`](./MODELS.PY.md) -> 데이터베이스에 반영될 모델데이터
+    * `tests.py` -> 테스트 파일
+    * `views.py` -> 사용자가 보게 될 html을 설정하는 파일
+    * `urls.py` -> 기본적으로 들어가있지는 않지만 하나의 urls.py로 모든 url을 관리하기엔 너무 많기 때문에 각 application별로 생성해줄 것
 
 2. User model을 변경하는 방법 [참조](https://docs.djangoproject.com/en/2.2/topics/auth/customizing/#substituting-a-custom-user-model)
 
