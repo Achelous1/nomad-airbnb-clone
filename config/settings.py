@@ -135,3 +135,6 @@ USE_TZ = True
 STATIC_URL = "/static/"
 
 AUTH_USER_MODEL = "users.User"
+
+# upload root directory
+MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
