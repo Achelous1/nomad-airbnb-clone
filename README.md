@@ -65,6 +65,7 @@ $ pipenv --three
     1. import를 할 때에는 django/python 패키지 -> 써드파티 패키지 -> 커스텀 패키지 순으로 import 한다
     2. class에 필드를 정의할 때에는 기본적인 `데이터형식의 필드` -> `relational 필드(ForeignKey, ManyToMany 등)` -> `class Meta (메타 옵션)` -> `__str__` 등의 함수 순으로 작성하자
     3. `admin`에서만 사용되는 메서드가 아닌 전역으로 사용되는 메서드 같은 경우, `model`에 정의해서 사용한다
+    4. `media`폴더/데이터베이스(sqlite)를 프로젝트 디렉터리 내부에서 작업하는 것은 개발단계에서만 할것. production 단계에서는 특정 스토리지/데이터베이스 레이어에서 모든 파일/데이터를 관리하게 하는 것이 옳다.
 
 * Meta Class : 
     1. 상속 되지 않는 해당 클래스의 고유 메타정보를 담고 있는 클래스 [참조](https://docs.djangoproject.com/en/3.2/ref/models/options/)

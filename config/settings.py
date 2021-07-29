@@ -138,3 +138,6 @@ AUTH_USER_MODEL = "users.User"
 
 # upload root directory
 MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
+
+# media url resolve
+MEDIA_URL = "/media/"
