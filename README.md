@@ -55,6 +55,7 @@ $ pipenv --three
     * Django프로젝트는 기본적으로 application들의 묶음이다
     * Application은 function들의 묶음이다
     * 각 Application 별로 묶어서 관리
+    * console에서 Django 환경으로 python 스크립트를 실행시키기 위해선 `python manage.py shell`로 접속하여 실행
     * 각 Application은 최대한 계획하여 서비스 별로 모듈화(작게)해서 만들 것
         * :thumbsup: Rule of Thumb : Application에 대해서 한문장으로 설명할 수 있어야 할 것!
 * Django ORM(Object Relational Mapping)
