@@ -14,10 +14,17 @@ class ItemAdmin(admin.ModelAdmin):
         return obj.rooms.count()
 
 
+class PhotoInline(admin.TabularInline):
+
+    model = models.Photo
+
+
 @admin.register(models.Room)
 class RoomAdmin(admin.ModelAdmin):
 
     """Room Admin Definition"""
+
+    inlines = (PhotoInline,)
 
     fieldsets = (
         (
@@ -81,6 +88,9 @@ class RoomAdmin(admin.ModelAdmin):
         "facilities",
         "house_rules",
     )
+
+    # 해당 필드를 팝업리스트 형태로 열어 검색하여 선택할 수 있게 해주는 옵션이다
+    raw_id_fields = ("host",)
 
     """
     search option prefix:
