@@ -91,7 +91,7 @@ $ pipenv --three
 ### Django Application 생성
 1. `django-admin startapp {application명}` 명령어로 생성
     * rooms, users, reviews, conversations, lists, reservations 생성
-    * 생성된 Application내부의 파일들의 이름은 ***절대로!!!*** 변경해서는 안된다
+    * 생성된 Application내부의 파일들의 이름은 ***절대로!!!*** 변경해서는 안된다 
         * Django에서 지정한 규칙대로 사용해야 하기 때문(Framework와 Library의 차이)
     * [`admin.py`](./ADMIN.PY.md) -> admin 패널에서 반영 될 코드
     * `apps.py` -> Application의 설정파일
@@ -114,3 +114,8 @@ $ pipenv --three
     * 특정 모델에서 다른 모델과의 참조관계(foreign key)를 만들고 싶다면:
         1. 필드를 `models.ForeignKey()`로 정의
         2. 연결할 모델을 import하고 필드에 모델 및 옵션 넘겨주기 (rooms/models.py 참조)
+
+### Django 커스텀 커맨드 생성
+* `python manage.py {command}`의 형식으로 커스텀 커맨드를 생성하는 방법
+* [Django document - Writing custom django-admin commands](https://docs.djangoproject.com/en/3.2/howto/custom-management-commands/)
+* [작성 된 커스텀 커맨드](./rooms/management/loveyou.py)
