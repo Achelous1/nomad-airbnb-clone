@@ -25,7 +25,7 @@
 * 위의 단점을 보완하기 위해 나온것이 Pipenv이며 각 프로젝트 별로 버블*bubble*을 생성하여 패키지를 프로젝트 단위로 관리할 수 있게 해준다
 
 ### 설치 방법
-```
+```shell
 # MacOS
 $ brew install pipenv
 $ brew upgrade pipenv
@@ -37,7 +37,7 @@ $ pip install --user pipenv
 ### Pipenv 버블 설정 방법
 * Django는 Python3.x 버전에서 가장 잘 작동한다. 그러니 pipenv를 설정할 때 python3.x버전을 사용하게 option을 줘야한다
 
-```
+```shell
 # Terminal
 $ pipenv --three
 ```
