@@ -116,6 +116,9 @@ $ pipenv --three
         2. 연결할 모델을 import하고 필드에 모델 및 옵션 넘겨주기 (rooms/models.py 참조)
 
 ### Django 커스텀 커맨드 생성
-* `python manage.py {command}`의 형식으로 커스텀 커맨드를 생성하는 방법
+* `python manage.py {command} --{option}`의 형식으로 커스텀 커맨드를 생성하는 방법
 * [Django document - Writing custom django-admin commands](https://docs.djangoproject.com/en/3.2/howto/custom-management-commands/)
 * [작성 된 커스텀 커맨드 리스트](./rooms/management/commands)
+
+### django_seed 패키지를 활용한 가짜 데이터 생성
+* [django-seed 깃허브](https://github.com/Brobin/django-seed)

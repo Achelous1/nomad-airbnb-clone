@@ -4,6 +4,8 @@ from rooms.models import Amenity
 
 class Command(BaseCommand):
 
+    help = "This command will create Amenities"
+
     # 실질적으로 실행되는 커맨드 메서드
     def handle(self, *args, **options):
         amenities = [
