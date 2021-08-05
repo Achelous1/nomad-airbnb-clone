@@ -14,7 +14,7 @@ class Command(BaseCommand):
             help="How many times do you want me to tell you that I love you?",
         )
 
-    # 실직적으로 실행되는 커맨드 메서드
+    # 실질적으로 실행되는 커맨드 메서드
     def handle(self, *args, **options):
         print(self, args, options)
         times = options.get("times")

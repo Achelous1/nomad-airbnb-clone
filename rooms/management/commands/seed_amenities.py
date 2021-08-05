@@ -4,7 +4,7 @@ from rooms.models import Amenity
 
 class Command(BaseCommand):
 
-    # 실직적으로 실행되는 커맨드 메서드
+    # 실질적으로 실행되는 커맨드 메서드
     def handle(self, *args, **options):
         amenities = [
             "Air conditioning",
