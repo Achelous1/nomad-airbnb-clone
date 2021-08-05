@@ -118,4 +118,4 @@ $ pipenv --three
 ### Django 커스텀 커맨드 생성
 * `python manage.py {command}`의 형식으로 커스텀 커맨드를 생성하는 방법
 * [Django document - Writing custom django-admin commands](https://docs.djangoproject.com/en/3.2/howto/custom-management-commands/)
-* [작성 된 커스텀 커맨드](./rooms/management/commands/loveyou.py)
+* [작성 된 커스텀 커맨드 리스트](./rooms/management/commands)
