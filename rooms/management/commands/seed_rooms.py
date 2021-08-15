@@ -1,5 +1,6 @@
 import random
 from django.core.management.base import BaseCommand
+from django.contrib.admin.utils import flatten
 from django_seed import Seed
 from rooms import models as room_models
 from users import models as user_models
@@ -23,7 +24,8 @@ class Command(BaseCommand):
             room_models.Room,
             number,
             {
-                "name": lambda x: seeder.faker.address(),  # faker 내장 함수로 다양한 mock data들을 생성할 수 있다
+                # faker 내장 함수로 다양한 mock data들을 생성할 수 있다
+                "name": lambda x: seeder.faker.address(),
                 "city": lambda x: seeder.faker.city(),
                 "country": lambda x: seeder.faker.country(),
                 "host": lambda x: random.choice(all_users),
@@ -35,5 +37,14 @@ class Command(BaseCommand):
                 "baths": lambda x: random.randint(1, 5),
             },
         )
-        seeder.execute()
+        created_rooms = seeder.execute()
+        created_clean = flatten(list(created_rooms.values()))
+        for pk in created_clean:
+            room = room_models.Room.objects.get(pk=pk)
+            for i in range(3, random.randint(10, 17)):
+                room_models.Photo.objects.create(
+                    caption=seeder.faker.sentence(),
+                    room=room,
+                    file=f"room_photos/{random.randint(1,31)}.webp",  # 파일경로가 아닌 타깃 URL
+                )
         self.stdout.write(self.style.SUCCESS(f"{number} rooms created!"))

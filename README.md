@@ -122,3 +122,4 @@ $ pipenv --three
 
 ### django_seed 패키지를 활용한 가짜 데이터 생성
 * [django-seed 깃허브](https://github.com/Brobin/django-seed)
+* [faker](https://faker.readthedocs.io/en/master/)
