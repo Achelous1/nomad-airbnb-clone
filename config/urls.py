@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 # settings.py를 임포트할 때엔 루트에서 바로 임포트하는것이 아닌 django.conf 패키지 내에서 임포트한다
 from django.conf import settings
@@ -22,7 +22,10 @@ from django.conf import settings
 # MEDIA_URL과 MEDIA_ROOT를 연결해주는 패키지를 임포트
 from django.conf.urls.static import static
 
-urlpatterns = [path("admin/", admin.site.urls)]
+urlpatterns = [
+    path("", include("core.urls", namespace="core")),
+    path("admin/", admin.site.urls),
+]
 
 
 if settings.DEBUG:
