@@ -94,7 +94,7 @@ class Room(core_models.TimeStampedModel):
 
     # save interception/override
     def save(self, *args, **kwargs):
-        self.city = str.capitalize(self.city)
+        self.city = str.capitalize(self.city)  # __str__
         super().save(*args, **kwargs)
 
     def total_rating(self):
